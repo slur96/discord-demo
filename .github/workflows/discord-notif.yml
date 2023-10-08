@@ -20,7 +20,7 @@ jobs:
         with: 
            url: https://discord.com/api/webhooks/1160366710998696026/CdcDQYe78mRxAx9SYIIwAkuneSeaIeSS01S7NFWEKCm5IGo2lODxOhGmeF41rHO1q-Cf
            method: POST
-           payload: '{ "content": "This is a new change ${{ steps.time.outputs.now }}!"}'
+           payload: '{ "content": "Samuel did a commit ${{ steps.time.outputs.now }}!"}'
 
       - name: Slack notification
         env:
@@ -30,4 +30,4 @@ jobs:
            SLACK_AVATAR: repository # Optional. can be (repository, sender, an URL) (defaults to webhook app avatar)
         uses: Ilshidur/action-slack@2.0.2
         with:
-          args: 'A new commit has been pushed.'
+          args: 'A new commit has been pushed by Sam.'
