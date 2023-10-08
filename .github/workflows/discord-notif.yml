@@ -20,4 +20,4 @@ jobs:
         with: 
            url: https://discord.com/api/webhooks/1160366710998696026/CdcDQYe78mRxAx9SYIIwAkuneSeaIeSS01S7NFWEKCm5IGo2lODxOhGmeF41rHO1q-Cf
            method: POST
-           payload: '{ "content": "The workflow ran at ${{ steps.time.outputs.now }}!"}'
+           payload: '{ "content": "This is a new change ${{ steps.time.outputs.now }}!"}'
