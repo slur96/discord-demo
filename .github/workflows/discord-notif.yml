@@ -1,0 +1,23 @@
+name: dsicord notif
+
+on:
+  workflow_dispatch:
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get the time
+        id: time
+        run:
+          NOW=$(date ="%r")
+          echo "now=${NOW}" >> $GITHUB_OUTPUT
+        env:
+          TZ: America/New_York
+      - name: Send the time
+        uses: satak/webrequest-action@main
+        with: 
+           url: https://discord.com/api/webhooks/1160366710998696026/CdcDQYe78mRxAx9SYIIwAkuneSeaIeSS01S7NFWEKCm5IGo2lODxOhGmeF41rHO1q-Cf
+           method: POST
+           payload: '{ "content": "The workflow ran at ${{ steps.time.outputs.now }}!"}'
