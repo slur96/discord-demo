@@ -1,1 +1,1 @@
-# This is a simple Slack and Discord webhook for Github Actions and Workflow
+# This is a simple Slack and Discord Webhook Automation for Github Actions and Workflow Notifs
